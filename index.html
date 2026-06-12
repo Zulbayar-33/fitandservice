@@ -136,7 +136,7 @@
 
 <script>
 const API_URL = "https://script.google.com/macros/s/AKfycbz4hVFjlVAh7X7SHLGRvy6Chq_LhQ4ODHfbwFtE0E7UquJ1WfACjynQ7ip-2ae19-XR6A/exec";
-alert("type = " + type);
+
 let employees = [];
 
 async function loadData() {
@@ -152,7 +152,6 @@ async function loadData() {
     }
 
     employees = data.employees || [];
-
     renderEmployees(employees);
 
   } catch (error) {
@@ -228,6 +227,8 @@ async function saveFood() {
   const type = document.getElementById("type").value;
   const amount = document.getElementById("amount").value;
   const msg = document.getElementById("msg");
+
+  alert("type = " + type);
 
   if (!selected || !selected.value) {
     msg.innerHTML = "<span class='text-danger'>Ажилтан сонгоно уу</span>";
